@@ -3,13 +3,14 @@ public class Main {
 
 
 
-    Singleton singleton = Singleton.getInstance();
-
-    singleton.print_something();
 
 
-    System.out.println(singleton);
+    Singleton singleton=Singleton.getInstance(0.5);
+    Singleton singleton2=Singleton.getInstance(1.5);
 
+    System.out.println(singleton.calcexchange(5));
+
+    System.out.println(singleton2.calcexchange(4));
 
     }
 }

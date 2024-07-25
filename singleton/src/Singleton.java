@@ -10,33 +10,45 @@
 
 
 */
+
+/*
+*  suppose the values of exchange is fixed for long time
+*  we store it in somewhere the time for call and store this details is large very large
+*  and this data is sensitive, so we will try to control data access .
+*  so we will use  singleton where is less the traffic of call the data to the program
+*  and allow to control the data .
+*/
+
+
 public class Singleton {
     
     private static Singleton instance;
-    String name  ;
-    int age ;
 
-    private Singleton() {
+    private static  double exchangefactor ;
+
+    private Singleton(double factor) {
         /*
          we can do like configuration or initialize something will not change or uniquely change
          where will instance one time
         */
-        name ="Ghassan";
-        age =20; // age change early be careful ^_^
+        // we suppose this is a huge data traffic
+            exchangefactor = factor ;
+
+
     }
     
-    public static Singleton getInstance() {
+    public static Singleton getInstance(double factor) {
         if (instance == null) {
 
-            instance = new Singleton();
+            instance = new Singleton(factor);
 
         }
         return instance;
     }
 
-    public static void print_something(){
+    public static double calcexchange(double basevalue){
 
-        System.out.println("hi There ");
+        return basevalue * exchangefactor ;
 
     }
     
