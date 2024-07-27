@@ -26,7 +26,7 @@ public class Singleton {
 
     private static  double exchangefactor ;
 
-    private Singleton(double factor) {
+    private  Singleton(double factor) {
         /*
          we can do like configuration or initialize something will not change or uniquely change
          where will instance one time
@@ -38,6 +38,7 @@ public class Singleton {
     }
     
     public static Singleton getInstance(double factor) {
+
         if (instance == null) {
 
             instance = new Singleton(factor);
