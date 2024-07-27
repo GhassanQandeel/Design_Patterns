@@ -11,7 +11,7 @@ public class Singleton_With_Sync {
             if (instance == null) {
                 instance = new Singleton_With_Sync();
             }
-
+//
         }
         return instance;
     }

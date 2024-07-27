@@ -15,7 +15,7 @@ public class Singleton_DoublyCheck {
                 if (instance == null)
                     instance = new Singleton_DoublyCheck();
             }
-
+//
         return instance;
     }
 }

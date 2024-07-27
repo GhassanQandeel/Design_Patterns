@@ -21,5 +21,5 @@ public class Fully_Singleton {
         }
         return result;
     }
-
+//
 }

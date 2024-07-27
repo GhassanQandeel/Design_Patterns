@@ -33,12 +33,11 @@ public class Singleton {
         */
         // we suppose this is a huge data traffic
             exchangefactor = factor ;
-
+//
 
     }
     
     public static Singleton getInstance(double factor) {
-
         if (instance == null) {
 
             instance = new Singleton(factor);
